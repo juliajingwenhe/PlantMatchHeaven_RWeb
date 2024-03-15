@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlantMatch Haven</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/wdr1jqr.css">
+    <script src="https://kit.fontawesome.com/becbe3f3b0.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<!--header section-->
+    <header>
+        
+        <div id="menu-bar" class="fas fa-bars">
+            <input type="checkbox" id="toggler" class="toggler">
+            <label for="toggler"></label>
+        </div>
+
+            <a href="#" class="logo">PlantMatch <span>Haven</span></a>
+        
+        <nav class="navbar">
+            <a href="#home">HOME</a>
+            <a href="#about">ABOUT</a>
+            <a href="#guides">GUIDES</a>   
+        </nav>
+            
+
+        <div class="icons">
+            <button id="close-sidebar"></button>
+            <a href="#saved" class="fas fa-heart" id="header-favorite-icon"></a>
+                <div id="saved-plants-sidebar" class="sidebar">
+                    <button id="clear-all">Clear All</button>
+                    <ul id="saved-plants-list"></ul>
+                </div>
+            <a href="#search" class="fas fa-search" id="search-btn"></a>
+                
+        </div>
+      
+            <form id="search-form" action="" method="GET" class="search-bar-container">      
+                <input type="search" id="search-bar" placeholder="Search Your Plants...">
+                <label for="search-bar" class="fas fa-search"></label>
+            </form>
+        
+    </header>
+
+<!--Home section-->
+<section class="home" id="home">
+    <div class="content">
+        <h3>WELCOME TO </h3> 
+        <h3><span>PLANTMATCH HAVEN</span></h3>
+        <p>Find the perfect plant for your home</p>
+        <a href="#guides" class="btn">GET STARTED</a>
+    </div>
+
+</section>
+
+<!--ABOUT SECTION START-->
+<section class="about" id="about">
+
+    <h1 class="heading"> <span> ABOUT </span> US </h1>
+    
+    <div class="row">
+
+        <div class="image-container">
+            <img src="images/AboutSection.jpeg" alt=""></img>
+        </div>
+
+        <div class="content">
+            <h3>About PlantMatch Haven</h3>
+            <p>Are you considering adding a touch of fresh greenery to your home? Seeking a bit of vitality or a cozy ambiance perhaps?</p>
+            <p>If you're a beginner wondering how to select your very first potted plant, or if you often find yourself away on work, worried about not being able to care for your green friends regularly, you've come to the right place!</p>
+            <p>Welcome to PlantMatch Haven, where we've curated a list of over 50 common household plants, offering you a wide selection to choose from, along with comprehensive care guides. Our mission is to help users find their perfect plant companion, one that not only captures their heart but also fits seamlessly into their home environment.</p>
+            <p>So, whether you're looking to brighten up a dim corner with a low-light loving fern, add a pop of color with a flowering succulent, or create an indoor jungle with towering palms, PlantMatch Haven is your go-to resource for all things green. Let us help you embark on a fulfilling journey of plant discovery and care, transforming your living space into a lush, welcoming haven that brings you joy every day!</p>
+            <p>Discover your perfect plant match with us today, and start nurturing a piece of nature that speaks to your soul!!!</p>
+        </div>
+
+    </div>
+</section>
+
+<!--GUIDES SECTION START-->   
+
+<section class="guides" id="guides">
+
+    <h1 class="heading"> PLANT <span>GUIDES</span></h1>
+
+    <!-- Filter Bar Section -->
+    <div class="filter-bar">
+        <div class="filter-item">
+            <button class="filter-item-button"><span>Difficulty</span> <i class="fas fa-chevron-down"></i></button>
+            <!-- Dropdown Content -->
+            <div class="filter-content">
+                <!-- Checkbox Filters -->
+                <label><input type="checkbox" name="difficulty" value="easy"> Easy</label>
+                <label><input type="checkbox" name="difficulty" value="moderate"> Moderate</label>
+                <label><input type="checkbox" name="difficulty" value="hard"> Hard</label>
+            </div>
+        </div>
+
+        <div class="filter-item">
+            <button class="filter-item-button"><span>Plant Size</span><i class="fas fa-chevron-down"></i></button>
+            <!-- Dropdown Content -->
+            <div class="filter-content">
+                <label><input type="checkbox" name="plant-size" value="small"> Small</label>
+                <label><input type="checkbox" name="plant-size" value="medium"> Medium</label>
+                <label><input type="checkbox" name="plant-size" value="large"> Large</label>
+            </div>
+        </div>
+
+        <div class="filter-item">
+            <button class="filter-item-button"><span>Plant Type</span><i class="fas fa-chevron-down"></i></button>
+            <!-- Dropdown Content -->
+            <div class="filter-content">
+                <label><input type="checkbox" name="plant-type" value="cactus-succulent">Cactus/Succulent</label>
+                <label><input type="checkbox" name="plant-type" value="flowering">Flowering</label>
+                <label><input type="checkbox" name="plant-type" value="tree">Tree</label>
+                <label><input type="checkbox" name="plant-type" value="aroid">Aroid</label>
+                <label><input type="checkbox" name="plant-type" value="hanging-plant">Hanging Plant</label>
+                <label><input type="checkbox" name="plant-type" value="pet-friendly">Pet Friendly</label>
+            </div>
+        </div>
+
+        <button class="clear-filters" onclick="clearFilters()">Clear Filters</button>
+    </div>
+
+        <!-- Plants box section -->
+
+        <div class="box-container"> 
+            
+                <div class="box difficulty-easy plant-size-medium plant-type-cactus-succulent" data-plant-name="African Milk Tree" data-plant-url="https://howmanyplants.com/plant/african-milk-tree">
+                    <div class="image">
+                        <img src="images/A-Z/african milk tree.jpeg" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-heart" data-plant="African Milk Tree"></a>
+                        </div>
+                    </div>
+                    
+                        <div class="content">
+                            <a href="https://howmanyplants.com/plant/african-milk-tree"><h3>African Milk Tree</h3></a>
+                        </div> 
+                </div>
+            
+
+                <div class="box difficulty-moderate plant-size-large plant-type-aroid" data-plant-name="Alocasia Calidora" data-plant-url="https://howmanyplants.com/plant/alocasia-calidora">
+                    <div class="image">
+                        <img src="images/A-Z/Alocasia Calidora.jpg" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-heart" data-plant="Alocasia Calidora"></a>
+                        </div>
+                    </div>
+
+                        <div class="content">
+                            <a href="https://howmanyplants.com/plant/alocasia-calidora"><h3>Alocasia Calidora</h3></a>
+                        </div>
+                </div>
+        
+            
+                <div class="box difficulty-moderate plant-size-medium plant-type-aroid" data-plant-name="Alocasia Polly" data-plant-url="https://howmanyplants.com/plant/alocasia-polly">
+                    <div class="image">
+                        <img src="images/A-Z/Alocasia polly.jpg" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-heart" data-plant="Alocasia Polly"></a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <a href="https://howmanyplants.com/plant/alocasia-polly"><h3>Alocasia Polly</h3></a> 
+                    </div>
+                </div>
+            
+
+                <div class="box difficulty-easy plant-size-medium plant-type-cactus-succulent" data-plant-name="Aloe Plant" data-plant-url="https://howmanyplants.com/plant/aloe-plant">
+                    <div class="image">
+                        <img src="images/A-Z/aloe2.jpg" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-heart" data-plant="Aloe Plant"></a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <a href="https://howmanyplants.com/plant/aloe-plant"><h3>Aloe Plant</h3></a>
+                    </div>
+                </div>
+       
+                <div class="box difficulty-moderate plant-size-small plant-type-aroid plant-type-flowering" data-plant-name="Anthurium" data-plant-url="https://howmanyplants.com/plant/anthurium">
+                    <div class="image">
+                        <img src="images/A-Z/anthurium2.jpg" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-heart" data-plant="Anthurium"></a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <a href="https://howmanyplants.com/plant/anthurium"><h3>Anthurium</h3></a>   
+                    </div>
+                </div>
+           
+                <div class="box difficulty-easy plant-type-flowering plant-size-large" data-plant-name="Bird of Paradise" data-plant-url="https://howmanyplants.com/plant/bird-of-paradise">
+                    <div class="image">
+                        <img src="images/A-Z/bird of paradise.jpg" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-heart" data-plant="Bird of Paradise"></a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <a href="https://howmanyplants.com/plant/bird-of-paradise"><h3>Bird of Paradise</h3></a>
+                    </div>
+                </div>
+          
+                <div class="box difficulty-moderate plant-type-pet-friendly plant-type-hanging-plant plant-size-medium" data-plant-name="Bird's Nest Fern" data-plant-url="https://howmanyplants.com/plant/birds-nest-fern">
+                    <div class="image">
+                        <img src="images/A-Z/Birds Nest Fern2.jpg" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-heart" data-plant="Bird's Nest Fern"></a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <a href="https://howmanyplants.com/plant/birds-nest-fern"><h3>Bird's Nest Fern</h3></a>
+                    </div>
+                </div>
+            
+                <div class="box difficulty-moderate plant-type-pet-friendly plant-type-hanging-plant plant-size-medium" data-plant-name="Boston Fern" data-plant-url="https://howmanyplants.com/plant/boston-fern">
+                    <div class="image">
+                        <img src="images/A-Z/boston fern2.jpg" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-heart" data-plant="Boston Fern"></a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <a href="https://howmanyplants.com/plant/boston-fern"><h3>Boston Fern</h3></a>
+                    </div>
+                </div>
+         
+     
+                <div class="box difficulty-moderate plant-size-small plant-size-medium plant-type-cactus-succulent plant-type-hanging-plant" data-plant-name="Burro's Tail" data-plant-url="https://howmanyplants.com/plant/burros-tail">
+                    <div class="image">
+                        <img src="images/A-Z/burrotail2.jpg" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-heart" data-plant="Burro's Tail"></a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <a href="https://howmanyplants.com/plant/burros-tail"><h3>Burro's Tail</h3></a>
+                    </div>
+                </div>
+            
+                <div class="box difficulty-moderate plant-type-aroid plant-size-medium" data-plant-name="Caladium" data-plant-url="https://howmanyplants.com/plant/caladium">
+                    <div class="image">
+                        <img src="images/A-Z/caladium2.jpg" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-heart" data-plant="Caladium"></a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <a href="https://howmanyplants.com/plant/caladium"><h3>Caladium</h3></a>
+                    </div>
+                </div>
+          
+                <div class="box difficulty-hard plant-type-pet-friendly plant-size-medium" data-plant-name="Calathea Medallion" data-plant-url="https://howmanyplants.com/plant/calathea-medallion">
+                    <div class="image">
+                        <img src="images/A-Z/Calathea Medallion2.jpeg" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-heart" data-plant="Calathea Medallion"></a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <a href="https://howmanyplants.com/plant/calathea-medallion"><h3>Calathea Medallion</h3></a>
+                    </div>
+                </div>
+       
+                <div class="box difficulty-hard plant-type-pet-friendly plant-size-large" data-plant-name="Calathea Orbifolia" data-plant-url="https://howmanyplants.com/plant/calathea-orbifolia">
+                    <div class="image">
+                        <img src="images/A-Z/Calathea Orbifolia2.jpeg" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-heart" data-plant="Calathea Orbifolia"></a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <a href="https://howmanyplants.com/plant/calathea-orbifolia"><h3>Calathea Orbifolia</h3></a>
+                    </div>
+                </div>
+       
+                <div class="box difficulty-hard plant-type-pet-friendly plant-size-medium" data-plant-name="Calathea Rattlesnake" data-plant-url="https://howmanyplants.com/plant/calathea-rattlesnake">
+                    <div class="image">
+                        <img src="images/A-Z/Calathea Rattlesnake.jpeg" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-heart" data-plant="Calathea Rattlesnake"></a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <a href="https://howmanyplants.com/plant/calathea-rattlesnake"><h3>Calathea Rattlesnake</h3></a>
+                    </div>
+                </div>
+           
+                <div class="box difficulty-easy plant-type-aroid plant-size-medium" data-plant-name="Chinese Evergreen" data-plant-url="https://howmanyplants.com/plant/chinese-evergreen">
+                    <div class="image">
+                        <img src="images/A-Z/chinese evergreen.jpg" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-heart" data-plant="Chinese Evergreen"></a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <a href="https://howmanyplants.com/plant/chinese-evergreen"><h3>Chinese Evergreen</h3></a>
+                    </div>
+                </div>
+        
+
+ 
+                <div class="box difficulty-easy plant-type-cactus-succulent plant-size-small" data-plant-name="Coral Cactus" data-plant-url="https://howmanyplants.com/plant/coral-cactus">
+                    <div class="image">
+                        <img src="images/A-Z/coral cactus.jpg" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-heart" data-plant="Coral Cactus"></a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <a href="https://howmanyplants.com/plant/coral-cactus"><h3>Coral Cactus</h3></a>
+                    </div>
+                </div>
+         
+
+                <div class="box difficulty-moderate plant-size-medium plant-size-large" data-plant-name="Croton" data-plant-url="https://howmanyplants.com/plant/croton">
+                    <div class="image">
+                        <img src="images/A-Z/croton2.png" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-heart" data-plant="Croton"></a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <a href="https://howmanyplants.com/plant/croton"><h3>Croton</h3></a>
+                    </div>
+                </div>
+ 
+
+
+                <div class="box difficulty-moderate plant-size-medium plant-size-small plant-type-flowering" data-plant-name="Desert Rose" data-plant-url="https://howmanyplants.com/plant/desert-rose">
+                    <div class="image">
+                        <img src="images/A-Z/desert rose2.jpg" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-heart" data-plant="Desert Rose"></a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <a href="https://howmanyplants.com/plant/desert-rose"><h3>Desert Rose</h3></a> 
+                    </div>
+                </div>
+
+
+
+                <div class="box difficulty-easy plant-type-aroid plant-size-large" data-plant-name="Dieffenbachia" data-plant-url="https://howmanyplants.com/plant/dieffenbachia">
+                    <div class="image">
+                        <img src="images/A-Z/Dieffenbachia.jpeg" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-heart" data-plant="Dieffenbachia"></a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <a href="https://howmanyplants.com/plant/dieffenbachia"><h3>Dieffenbachia</h3></a>
+                    </div>
+                </div>
+      
+                <div class="box difficulty-easy plant-type-tree plant-size-large" data-plant-name="Dracaena" data-plant-url="https://howmanyplants.com/plant/dracaena">
+                    <div class="image">
+                        <img src="images/A-Z/Dracaena.jpeg" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-heart" data-plant="Dracaena"></a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <a href="https://howmanyplants.com/plant/dracaena"><h3>Dracaena</h3></a>
+                    </div>
+                </div>
+
+                <div class="box difficulty-moderate plant-type-hanging-plant plant-size-medium" data-plant-name="English Ivy" data-plant-url="https://howmanyplants.com/plant/english-ivy">
+                    <div class="image">
+                        <img src="images/A-Z/English_Ivy.jpg" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-heart" data-plant="English Ivy"></a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <a href="https://howmanyplants.com/plant/english-ivy"><h3>English Ivy</h3></a>
+                    </div>
+                </div>
+         
+                <div class="box difficulty-moderate plant-type-tree plant-size-large" data-plant-name="Ficus Audrey" data-plant-url="https://howmanyplants.com/plant/ficus-audrey">
+                    <div class="image">
+                        <img src="images/A-Z/Ficus Audrey2.jpg" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-heart" data-plant="Ficus Audrey"></a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <a href="https://howmanyplants.com/plant/ficus-audrey"><h3>Ficus Audrey</h3></a>
+                    </div>
+                </div>
+          
+                <div class="box difficulty-hard plant-type-tree plant-size-large" data-plant-name="Fiddle Leaf Fig" data-plant-url="https://howmanyplants.com/plant/fiddle-leaf-fig">
+                    <div class="image">
+                        <img src="images/A-Z/Fiddle Leaf Fig.jpeg" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-heart" data-plant="Fiddle Leaf Fig"></a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <a href="https://howmanyplants.com/plant/fiddle-leaf-fig"><h3>Fiddle Leaf Fig</h3></a>
+                    </div>
+                </div>
+   
+                <div class="box difficulty-easy plant-type-cactus-succulent plant-size-medium plant-type-hanging-plant" data-plant-name="Fishbone Cactus" data-plant-url="https://howmanyplants.com/plant/fishbone-cactus">
+                    <div class="image">
+                        <img src="images/A-Z/Fishbone Cactus.jpeg" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-heart" data-plant="Fishbone Cactus"></a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <a href="https://howmanyplants.com/plant/fishbone-cactus"> <h3>Fishbone Cactus</h3></a>
+                    </div>
+                </div>
+      
+                <div class="box difficulty-easy plant-type-hanging-plant plant-type-aroid plant-size-medium" data-plant-name="Golden Pothos" data-plant-url="https://howmanyplants.com/plant/golden-pothos">
+                    <div class="image">
+                        <img src="images/A-Z/golden pothos2.jpeg" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-heart" data-plant="Golden Pothos"></a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <a href="https://howmanyplants.com/plant/golden-pothos"><h3>Golden Pothos</h3></a>
+                    </div>
+                </div>
+         
+
+
+                <div class="box difficulty-easy plant-type-hanging-plant plant-type-aroid plant-size-medium" data-plant-name="Heartleaf Philodendron" data-plant-url="https://howmanyplants.com/plant/heartleaf-philodendron">
+                    <div class="image">
+                        <img src="images/A-Z/Heartleaf Philodendron .jpeg" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-heart" data-plant="Heartleaf Philodendron"></a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <a href="https://howmanyplants.com/plant/heartleaf-philodendron"><h3>Heartleaf Philodendron</h3></a>
+                    </div>
+                </div>
+      
+
+
+                <div class="box difficulty-easy plant-type-hanging-plant plant-type-flowering plant-size-medium" data-plant-name="Hindu Rope Plant" data-plant-url="https://howmanyplants.com/plant/hindu-rope-plant">
+                    <div class="image">
+                        <img src="images/A-Z/hindu-rope-plant.jpg" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-heart" data-plant="Hindu Rope Plant"></a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <a href="https://howmanyplants.com/plant/hindu-rope-plant"><h3>Hindu Rope Plant</h3></a>
+                    </div>
+                </div>
+     
+                <div class="box difficulty-moderate plant-type-pet-friendly plant-size-medium" data-plant-name="Maranta" data-plant-url="https://howmanyplants.com/plant/maranta">
+                    <div class="image">
+                        <img src="images/A-Z/Maranta.jpeg" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-heart" data-plant="Maranta"></a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <a href="https://howmanyplants.com/plant/maranta"><h3>Maranta</h3></a>
+                    </div>
+                </div>
+   
+
+                <div class="box difficulty-easy plant-type-aroid plant-size-medium" data-plant-name="Mini Monstera" data-plant-url="https://howmanyplants.com/plant/mini-monstera">
+                    <div class="image">
+                        <img src="images/A-Z/Mini Monstera.jpg" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-heart" data-plant="Mini Monstera"></a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <a href="https://howmanyplants.com/plant/mini-monstera"><h3>Mini Monstera</h3></a>
+                    </div>
+                </div>
+       
+
+                <div class="box difficulty-easy plant-type-tree plant-size-medium" data-plant-name="Money Tree" data-plant-url="https://howmanyplants.com/plant/money-tree">
+                    <div class="image">
+                        <img src="images/A-Z/Money Tree3.jpeg" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-heart" data-plant="Money Tree"></a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <a href="https://howmanyplants.com/plant/money-tree"><h3>Money Tree</h3></a>
+                    </div>
+                </div>
+  
+
+          
+                <div class="box difficulty-easy plant-type-hanging-plant plant-type-aroid plant-size-medium plant-size-small" data-plant-name="Monstera Adansonii" data-plant-url="https://howmanyplants.com/plant/monstera-adansonii">
+                    <div class="image">
+                        <img src="images/A-Z/Monstera-Adansonii2.jpg" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-heart" data-plant="Monstera Adansonii"></a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <a href="https://howmanyplants.com/plant/monstera-adansonii"><h3>Monstera Adansonii</h3></a>
+                    </div>
+                </div>
+
+
+
+                <div class="box difficulty-easy plant-type-aroid plant-size-large" data-plant-name="Monstera" data-plant-url="https://howmanyplants.com/plant/monstera">
+                    <div class="image">
+                        <img src="images/A-Z/monstera.jpg" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-heart" data-plant="Monstera"></a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <a href="https://howmanyplants.com/plant/monstera"><h3>Monstera</h3></a>
+                    </div>
+                </div>
+
+
+
+                <div class="box difficulty-hard plant-type-pet-friendly plant-type-flowering plant-size-medium" data-plant-name="Moth Orchid" data-plant-url="https://howmanyplants.com/plant/moth-orchid">
+                    <div class="image">
+                        <img src="images/A-Z/Moth Orchid2.jpeg" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-heart" data-plant="Moth Orchid"></a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <a href="https://howmanyplants.com/plant/moth-orchid"><h3>Moth Orchid</h3></a>
+                    </div>
+                </div>
+        
+
+    
+                <div class="box difficulty-moderate plant-type-pet-friendly plant-size-small" data-plant-name="Nerve Plant" data-plant-url="https://howmanyplants.com/plant/nerve-plant">
+                    <div class="image">
+                        <img src="images/A-Z/nerve plant3.jpg" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-heart" data-plant="Nerve Plant"></a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <a href="https://howmanyplants.com/plant/nerve-plant"><h3>Nerve Plant</h3></a>
+                    </div>
+                </div>
+
+
+
+
+                <div class="box difficulty-easy plant-type-flowering plant-size-small" data-plant-name="Oxalis" data-plant-url="https://howmanyplants.com/plant/oxalis">
+                    <div class="image">
+                        <img src="images/A-Z/oxalis4.jpg" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-heart" data-plant="Oxalis"></a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <a href="https://howmanyplants.com/plant/oxalis"><h3>Oxalis</h3></a>
+                    </div>
+                </div>
+        
+
+                <div class="box difficulty-easy plant-type-pet-friendly plant-size-medium" data-plant-name="Parlor Palm" data-plant-url="https://howmanyplants.com/plant/parlor-palm">
+                    <div class="image">
+                        <img src="images/A-Z/parlor palm2.jpg" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-heart" data-plant="Parlor Palm"></a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <a href="https://howmanyplants.com/plant/parlor-palm"><h3>Parlor Palm</h3></a>
+                    </div>
+                </div>
+       
+
+                <div class="box difficulty-easy plant-type-aroid plant-type-flowering plant-size-medium" data-plant-name="Peace Lily" data-plant-url="https://howmanyplants.com/plant/peace-lily">
+                    <div class="image">
+                        <img src="images/A-Z/Peace Lily.jpeg" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-heart" data-plant="Peace Lily"></a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <a href="https://howmanyplants.com/plant/peace-lily"><h3>Peace Lily</h3></a>
+                    </div>
+                </div>
+
+
+         
+                <div class="box difficulty-easy plant-type-cactus-succulent plant-size-medium" data-plant-name="Pencil Cactus" data-plant-url="https://howmanyplants.com/plant/pencil-cactus">
+                    <div class="image">
+                        <img src="images/A-Z/Pencil Cactus2.jpg" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-heart" data-plant="Pencil Cactus"></a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <a href="https://howmanyplants.com/plant/pencil-cactus"><h3>Pencil Cactus</h3></a>
+                    </div>
+                </div>
+
+
+                <div class="box difficulty-easy plant-type-aroid plant-size-large" data-plant-name="Philodendron Selloum" data-plant-url="https://howmanyplants.com/plant/philodendron-selloum">
+                    <div class="image">
+                        <img src="images/A-Z/philodendron Selloum2.jpg" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-heart" data-plant="Philodendron Selloum"></a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <a href="https://howmanyplants.com/plant/philodendron-selloum"><h3>Philodendron Selloum</h3></a>
+                    </div>
+                </div>
+   
+
+ 
+                <div class="box difficulty-easy plant-size-small" data-plant-name="Pilea" data-plant-url="https://howmanyplants.com/plant/pilea">
+                    <div class="image">
+                        <img src="images/A-Z/Pilea.jpeg" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-heart" data-plant="Pilea"></a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <a href="https://howmanyplants.com/plant/pilea"><h3>Pilea</h3></a>
+                    </div>
+                </div>
+
+            
+
+                <div class="box difficulty-easy plant-type-pet-friendly plant-size-small" data-plant-name="Ponytail Palm" data-plant-url="https://howmanyplants.com/plant/ponytail-palm">
+                    <div class="image">
+                        <img src="images/A-Z/Ponytail Palm.jpeg" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-heart" data-plant="Ponytail Palm"></a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <a href="https://howmanyplants.com/plant/ponytail-palm"><h3>Ponytail Palm</h3></a>
+                    </div>
+                </div>
+
+            
+                <div class="box difficulty-moderate plant-type-tree plant-size-large" data-plant-name="Rubber Tree" data-plant-url="https://howmanyplants.com/plant/rubber-tree">
+                    <div class="image">
+                        <img src="images/A-Z/Rubber Tree.jpg" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-heart" data-plant="Rubber Tree"></a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <a href="https://howmanyplants.com/plant/rubber-tree"><h3>Rubber Tree</h3></a>
+                    </div>
+                </div>
+          
+
+           
+                <div class="box difficulty-easy plant-type-hanging-plant plant-type-aroid plant-size-medium" data-plant-name="Satin Pothos" data-plant-url="https://howmanyplants.com/plant/satin-pothos">
+                    <div class="image">
+                        <img src="images/A-Z/Satin Pothos2.jpg" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-heart" data-plant="Satin Pothos"></a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <a href="https://howmanyplants.com/plant/satin-pothos"><h3>Satin Pothos</h3></a>
+                    </div>
+                </div>
+
+
+                <div class="box difficulty-easy plant-type-tree plant-size-large" data-plant-name="Schefflera" data-plant-url="https://howmanyplants.com/plant/schefflera">
+                    <div class="image">
+                        <img src="images/A-Z/schefflera2.jpeg" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-heart" data-plant="Schefflera"></a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <a href="https://howmanyplants.com/plant/schefflera"><h3>Schefflera</h3></a>
+                    </div>
+                </div>
+       
+
+    
+                <div class="box difficulty-easy plant-type-cactus-succulent plant-size-medium" data-plant-name="Snake Plant" data-plant-url="https://howmanyplants.com/plant/snake-plant">
+                    <div class="image">
+                        <img src="images/A-Z/Snake Plant2.jpeg" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-heart" data-plant="Snake Plant"></a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <a href="https://howmanyplants.com/plant/snake-plant"><h3>Snake Plant</h3></a>
+                    </div>
+                </div>
+   
+
+         
+                <div class="box difficulty-easy plant-type-pet-friendly plant-type-hanging-plant plant-size-medium" data-plant-name="Spider Plant" data-plant-url="https://howmanyplants.com/plant/spider-plant">
+                    <div class="image">
+                        <img src="images/A-Z/Spider Plant2.jpeg" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-heart" data-plant="Spider Plant"></a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <a href="https://howmanyplants.com/plant/spider-plant"><h3>Spider Plant</h3></a>
+                    </div>
+                </div>
+       
+
+
+                <div class="box difficulty-moderate plant-size-medium" data-plant-name="Spotted Begonia" data-plant-url="https://howmanyplants.com/plant/spotted-begonia">
+                    <div class="image">
+                        <img src="images/A-Z/Spotted Begonia.jpeg" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-heart" data-plant="Spotted Begonia"></a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <a href="https://howmanyplants.com/plant/spotted-begonia"><h3>Spotted Begonia</h3></a>
+                    </div>
+                </div>
+
+
+   
+                <div class="box difficulty-easy plant-size-medium plant-type-cactus-succulent" data-plant-name="Starfish Snake Plant" data-plant-url="https://howmanyplants.com/plant/starfish-snake-plant">
+                    <div class="image">
+                        <img src="images/A-Z/starfish2.jpeg" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-heart" data-plant="Starfish Snake Plant"></a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <a href="https://howmanyplants.com/plant/starfish-snake-plant"><h3>Starfish Snake Plant</h3></a>
+                    </div>
+                </div>
+       
+
+
+                <div class="box difficulty-moderate plant-size-small plant-type-cactus-succulent plant-type-hanging-plant" data-plant-name="String of Dolphins" data-plant-url="https://howmanyplants.com/plant/string-of-dolphins">
+                    <div class="image">
+                        <img src="images/A-Z/String of Dolphins.jpg" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-heart" data-plant="String of Dolphins"></a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <a href="https://howmanyplants.com/plant/string-of-dolphins"><h3>String of Dolphins</h3></a>
+                    </div>
+                </div>
+  
+
+
+                <div class="box difficulty-moderate plant-size-small plant-type-cactus-succulent plant-type-hanging-plant"  data-plant-name="String of Hearts" data-plant-url="https://howmanyplants.com/plant/string-of-hearts">
+                    <div class="image">
+                        <img src="images/A-Z/string of hearts2.jpeg" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-heart" data-plant="String of Hearts"></a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <a href="https://howmanyplants.com/plant/string-of-hearts"><h3>String of Hearts</h3></a>
+                    </div>
+                </div>
+
+
+
+                <div class="box difficulty-hard plant-type-pet-friendly plant-size-medium" data-plant-name="Stromanthe Triostar" data-plant-url="https://howmanyplants.com/plant/stromanthe-triostar">
+                    <div class="image">
+                        <img src="images/A-Z/Stromanthe Triostar.jpeg" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-heart" data-plant="Stromanthe Triostar"></a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <a href="https://howmanyplants.com/plant/stromanthe-triostar"><h3>Stromanthe Triostar</h3></a> 
+                    </div>
+                </div>
+            
+
+                <div class="box difficulty-moderate plant-type-hanging-plant plant-type-flowering plant-size-medium plant-size-small" data-plant-name="Tradescantia Nanouk" data-plant-url="https://howmanyplants.com/plant/tradescantia-nanouk">
+                    <div class="image">
+                        <img src="images/A-Z/tradescantia-nanouk2.jpg" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-heart" data-plant="Tradescantia Nanouk"></a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <a href="https://howmanyplants.com/plant/tradescantia-nanouk"><h3>Tradescantia Nanouk</h3></a>
+                    </div>
+                </div>
+
+
+                <div class="box difficulty-moderate plant-type-hanging-plant plant-size-medium plant-size-small" data-plant-name="Tricolor Hoya" data-plant-url="https://howmanyplants.com/plant/tricolor-hoya">
+                    <div class="image">
+                        <img src="images/A-Z/Tricolor Hoya.jpg" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-heart" data-plant="Tricolor Hoya"></a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <a href="https://howmanyplants.com/plant/tricolor-hoya"><h3>Tricolor Hoya</h3></a>
+                    </div>
+                </div>
+
+
+                <div class="box difficulty-moderate plant-type-pet-friendly plant-size-small" data-plant-name="Watermelon Peperomia" data-plant-url="https://howmanyplants.com/plant/watermelon-peperomia">
+                    <div class="image">
+                        <img src="images/A-Z/Watermelon Peperomia.jpeg" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-heart" data-plant="Watermelon Peperomia"></a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <a href="https://howmanyplants.com/plant/watermelon-peperomia"><h3>Watermelon Peperomia</h3></a>
+                    </div>
+                </div>
+            
+
+                <div class="box difficulty-easy plant-type-tree plant-size-large" data-plant-name="Yucca" data-plant-url="https://howmanyplants.com/plant/yucca">
+                    <div class="image">
+                        <img src="images/A-Z/Yucca.jpeg" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-heart" data-plant="Yucca"></a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <a href="https://howmanyplants.com/plant/yucca"><h3>Yucca</h3></a>
+                    </div>
+                </div>
+
+            
+
+                <div class="box difficulty-easy plant-type-aroid plant-size-medium" data-plant-name="ZZ Plant" data-plant-url="https://howmanyplants.com/plant/zz-plant">
+                    <div class="image">
+                        <img src="images/A-Z/zz plant.jpeg" alt="">
+                        <div class="icons">
+                            <a href="#" class="fas fa-heart" data-plant="ZZ Plant"></a>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <a href="https://howmanyplants.com/plant/zz-plant"><h3>ZZ Plant</h3></a>
+                    </div>
+                </div>
+            
+        
+        </div>
+ </section>
+
+ <!--footer section-->
+ <section class="footer">
+
+    <div class="box-container">
+
+
+        <div class="box">
+            <h3>Quick Links</h3>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#guides">Guides</a>
+            
+        </div>
+
+        <div class="box">
+            <h3>Extra Links</h3>
+            <button id="close-sidebar"></button>
+            <a href="#saved" class="fas fa-heart" id="header-favorite-icon"></a>
+                <div id="saved-plants-sidebar" class="sidebar">
+                    <button id="clear-all">Clear All</button>
+                    <ul id="saved-plants-list"></ul>
+                </div>
+        </div>
+        
+
+        <div class="box">
+            <h3>Contact Info</h3>
+            <p>hello@plantmatchhaven.com</p> 
+        </div>
+
+    </div>
+
+    <div class="credit">Created by <span>Julia He</span> | All rights reserved</h1>
+
+ </section>
+
+
+
+
+    
+    <script src="javascript/js.js"></script>
+    
+</body>
+</html>
